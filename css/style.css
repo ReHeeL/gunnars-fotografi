@@ -1,0 +1,150 @@
+/* Reset styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation bar styles */
+nav {
+    display: flex; /* Flexbox to create a horizontal layout */
+    justify-content: space-between;
+    align-items: center;
+    background-color: white(109, 109, 109, 0.443); /* Set the background to white */
+    padding: 3em 2em;
+}
+
+/* Logo styles */
+.logo {
+    color: black; /* Set the logo color to black to match */
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+/* Navigation links styles */
+.nav-links {
+    list-style: none; /* Remove list bullets */
+    display: flex; /* Make links horizontal */
+    margin: 0;
+    margin-right: 2em; /* Adjust this value to move links to the left */
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 2em; /* Add space between each link */
+}
+
+.nav-links a {
+    color: black; /* Set link text color to black */
+    text-decoration: none;
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.nav-links a:hover {
+    color: #777; /* Make it a darker gray on hover for better visibility */
+}
+
+/* Hamburger menu button styles */
+.hamburger-menu {
+    display: none; /* Hide the hamburger menu button by default */
+    font-size: 2em; /* Size of the hamburger icon */
+    background: none; /* Remove button background */
+    border: none; /* Remove button border */
+    cursor: pointer; /* Make it look clickable */
+}
+
+/* Media query for small screens (e.g., max-width: 768px) */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide the navigation links initially */
+        flex-direction: column; /* Stack the links vertically */
+        align-items: center; /* Center the links horizontally */
+        background-color: white; /* Set a background to match the nav */
+        position: fixed; /* Position the dropdown below the navbar */
+        top: 80px; /* Position it right below the navbar (adjust height if necessary) */
+        left: 0; /* Start from the left edge */
+        width: 100%; /* Take up the full width of the screen */
+        padding: 1em 0; /* Add padding for spacing */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a slight shadow for style */
+    }
+
+    .nav-links.show {
+        display: flex; /* Show the links when the 'show' class is present */
+    }
+
+    .nav-links li {
+        margin: 1.5em 0; /* Add space between each link for better readability */
+    }
+
+    /* Show hamburger menu button on small screens */
+    .hamburger-menu {
+        display: block; /* Show the hamburger menu button */
+        position: absolute; /* Position the button on the navbar */
+        top: 1em; /* Set button at the top */
+        right: 1.5em; /* Set button to the right */
+    }
+
+    /* Navigation styles for small screens */
+    nav {
+        position: relative; /* Allow absolute positioning of nav-links under nav */
+    }
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+    .gallery-item {
+        width: 100%; /* Ensure each item takes up the full width of the container */
+    }
+}
+
+/* Show class for nav-links */
+.nav-links.show {
+    display: flex; /* Show the links when the 'show' class is present */
+}
+
+/*CSS for the gallery commercial/*
+
+/* Gallery Section Styles */
+.gallery-section {
+    padding: 2em; /* Add padding around the entire section for spacing */
+    text-align: center; /* Center-align the heading and items */
+}
+
+/* Gallery Container Styles */
+.gallery {
+    display: flex; /* Use Flexbox to create a masonry effect */
+    flex-wrap: wrap; /* Allow items to wrap into multiple rows */
+    gap: 3em; /* Set the space between the grid items */
+    max-width: 1400px; /* Set a maximum width to keep the gallery contained */
+    margin: 0 auto; /* Center the gallery within the page */
+    align-items: flex-start; /* Align items to the top */
+}
+
+/* Individual Gallery Item Styles */
+.gallery-item {
+    width: calc(50% - 1.5em); /* Set the width to half of the container, minus the gap */
+    margin-bottom: 1.5em; /* Add space between items vertically */
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+    overflow: hidden; /* Ensure that overflow is hidden if images are too large */
+    border-radius: 10px; /* Optional: Add rounded corners to images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow for a stylish effect */
+}
+
+/* Image Styles */
+.gallery-item img {
+    width: 100%; /* Make images fill the gallery item */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any gap under images */
+    border-radius: 10px; /* Same as gallery-item for consistency */
+}
+
+/* Kontakt.html */
+.fotograf-bio, .kontaktdetaljer {
+    text-align: center;
+    padding-left: 15em;
+    padding-right: 15em;
+    
+}
+
+.kontaktdetaljer ul {
+    list-style: none;
+}
